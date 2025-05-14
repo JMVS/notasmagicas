@@ -58,6 +58,7 @@ return [
     'asset_url' => env('ASSET_URL', null),
 
     'company_url' => env('APP_COMPANY_URL', 'https://example.com'),
+    'company_logo' => env('APP_COMPANY_LOGO'),
 
     /*
     |--------------------------------------------------------------------------
