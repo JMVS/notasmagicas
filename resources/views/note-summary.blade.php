@@ -10,6 +10,7 @@
             <div class="row">
                 <div class="col-12 col-md-8 offset-md-2 text-center">
                     <h4 class="mb-2">Here's your link:</h4>
+                    <p>IMPORTANT: Copy the link below, and send it to the person with whom you want to share your note.</p>
                     <div data-clipboard-target=".link"
                          class="card copy pointer p-4 d-flex justify-content-center align-items-center">
                         <p class="link npm ">{{env('APP_URL')}}/v/{{$note->token}}</p>
@@ -41,7 +42,7 @@
 {{--                                </div>--}}
 {{--                            </form>--}}
 {{--                        </div>--}}
-                        <div class="col-12">
+                        <div class="col-12" style="display: none;">
                             <form class="" method="post" action="/send-email">
                                 @csrf
                                 <label>Or send link by email</label>
