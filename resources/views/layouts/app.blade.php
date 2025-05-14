@@ -1,9 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-{{--    Plausible Code    --}}
-    <script defer data-domain="burnernote.com" src="https://plausible.io/js/plausible.js"></script>
-{{--    End of Plausible Code--}}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,23 +9,23 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Primary Meta Tags -->
-    <title>Burner Note</title>
-    <meta name="title" content="Burner Note">
+    <title>{{ config('app.name') }} &bull; {{ config('app.company') }}</title>
+    <meta name="title" content="{{ config('app.name') }}">
     <meta name="description" content="Send secure and encrypted notes that self destruct once they've been read">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://burnernote.com/">
-    <meta property="og:title" content="Burner Note">
+    <meta property="og:url" content="{{ config('app.url') }}">
+    <meta property="og:title" content="{{ config('app.name') }}">
     <meta property="og:description" content="Send secure and encrypted notes that self destruct once they've been read">
-    <meta property="og:image" content="https://burnernote.com/img/burnernote.png">
+    <meta property="og:image" content="{{ config('app.url') }}/img/burnernote.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://burnernote.com/">
-    <meta property="twitter:title" content="Burner Note">
+    <meta property="twitter:url" content="{{ config('app.url') }}">
+    <meta property="twitter:title" content="{{ config('app.name') }}">
     <meta property="twitter:description" content="Send secure and encrypted notes that self destruct once they've been read">
-    <meta property="twitter:image" content="https://burnernote.com/img/burnernote.png">
+    <meta property="twitter:image" content="{{ config('app.url') }}/img/burnernote.png">
 
     <!-- Scripts -->
     <script src="{{ secure_asset('js/app.js') }}" defer></script>
@@ -44,7 +42,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Secure Notes') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
