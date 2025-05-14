@@ -13,7 +13,8 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Secure Notes'),
+    'company' => env('APP_COMPANY', 'Company Name'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,6 +56,8 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL', null),
+
+    'company_url' => env('APP_COMPANY_URL', 'https://example.com'),
 
     /*
     |--------------------------------------------------------------------------
