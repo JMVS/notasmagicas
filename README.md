@@ -1,75 +1,70 @@
-## Burnernote App
+## App Notas Mágicas
 
-**[Burnernote](https://burnernote.com)** Send secure and encrypted notes that self destruct once they've been read. It is designed to be:
+**Notas Mágicas** Envía notas seguras y cifradas que se autodestruyen una vez leídas. Está diseñado para:
 
-* **Ad Free and simple.** No clutter, no bloat, no complex dependencies. Burnernote is built with PHP so it’s quick and easy to deploy.
+* **Sin publicidad y libre** Sin desorden, sin sobrecarga, sin dependencias complejas. Notas Mágicas está desarrollado con PHP, por lo que es rápido y fácil de implementar.
 
-* **Open-source and Beautiful.** [Burnernote](https://github.com/Gigamick/burnernote) is open source and available on github.
+* **Código abierto y refinado.** [Notas mágicas](https://github.com/JMVS/notasmagicas) es de código abierto y disponible en GitHub.
 
-* **Set password.** Set an optional password for the self-destructing messages.
+* **Contraseña opcional.** Establecer una contraseña opcional para los mensajes que se autodestruyen.
 
-* **Auto self destruct.** The note will expire after a set number of days, **default to 7 days**
+* **Autodestrucción automática.** La nota caducará después de un número determinado de días., **por defecto 7 días**
 
 
-### :zap: Installation using [laravel\valet](https://laravel.com/docs/10.x/valet)
+### :zap: Instalación utilizando [laravel\valet](https://laravel.com/docs/10.x/valet)
 
-- Clone the repository.
+- Clonar el repositorio.
 ```bash
-git clone https://github.com/Gigamick/burnernote.git
+git clone https://github.com/JMVS/notasmagicas.git
 ```
 
-- Change current working directory
+- Cambiar el dicrectorio de trabajo actual
 ```bash
-cd burnernote
+cd notasmagicas
 ```
 
-- Make sure `php is ^8.0`
+- Asegurarse que la versión de `php es ^8.0`
 ```bash
 php -v
 ```
 
-- Install composer dependencies
+- Instalar las dependencias con composer
 ```bash
 composer install
 ```
 
-- Copy .env file 
+- Copiar el archivo .env 
 ```bash
 cp .env.example .env
 ```
 
-- Edit database credentials in `.env file`
+- Editar las credenciales de la base de datos en el `archivo .env`
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=burnernote
+DB_DATABASE=notasmagicas
 DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
-- Edit app url to 'https://burnernote.test' since assets are served through secure url
+- Edite la URL de la aplicación a 'https://burnernote.test' ya que los recursos se sirven a través de una URL segura
 
-- Generate app key and migrate database
+- Generar clave de aplicación y migrar base de datos
 ```bash
 php artisan key:generate
 php artisan migrate
 ```
 
-- Serve site through valet
+- Servir el sitio a través de valet
 ```bash
 valet link
 valet secure
 ```
 
-- visit 'https://burnernote.test' in the browser
+- Visitar 'https://burnernote.test' desde el navegador
 
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Burnernote, create an issue.
-
-
-## License
-
-Burnernote is open-source software licensed under the [GNU License](https://github.com/Gigamick/burnernote/blob/main/LICENSE).
+## Licencia
+Notas mágicas es un software de código abierto bajo la licencia [GNU License](https://github.com/Gigamick/burnernote/blob/main/LICENSE).
+Notas mágicas está basado en [Burnernote](https://github.com/Gigamick/burnernote/).
