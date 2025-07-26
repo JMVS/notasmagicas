@@ -85,7 +85,7 @@ class NoteController extends Controller
         $verifypasswordtrue = Hash::check($request->password, $passwordcheck->password);
 
         if (!$verifypasswordtrue) {
-            return back()->with('success', 'Incorrect password');
+            return back()->with('success', 'Contraseña no válida');
         }
 
         $check = Note::query()->where([
